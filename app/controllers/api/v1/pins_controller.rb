@@ -37,7 +37,6 @@ before_action :authenticate_user, only: [:create]
     puts headers[':X-User-Email']
     puts @current_user.api_token
     puts headers['X-Api-Token']
-    end
   end
 
 
