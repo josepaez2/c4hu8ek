@@ -7,13 +7,13 @@ before_action :authenticate_user, only: [:create]
 # device tiene current user verlo en costsos
 
   def index
-    HTTParty.post('http://localhost:3000/api/v1/pins', body: { user_id: 1 , title: "QPMA", image_url: "https://s3.amazonaws.com/makeitreal/pins/lamborghini.jpg"}.to_json, headers: { 'Content-Type' => 'application/json', 'X-User-Email'=> 'josepaez_2@hotmail.com', 'X-Api-Token'=> '20d8cf670e88edb69e02f93ed2aa493d'})
+    # HTTParty.post('http://localhost:3000/api/v1/pins', body: { user_id: 1 , title: "QPMA", image_url: "https://s3.amazonaws.com/makeitreal/pins/lamborghini.jpg"}.to_json, headers: { 'Content-Type' => 'application/json', 'X-User-Email'=> 'josepaez_2@hotmail.com', 'X-Api-Token'=> '20d8cf670e88edb69e02f93ed2aa493d'})
     # puts "-------------------"
     # puts  @current_user = current_user
     # puts "-------------------"
     # puts  @current_user = current_user
     # puts "-------------------"
-    # render json: Pin.all.order('created_at DESC')
+    render json: Pin.all.order('created_at DESC')
   end
 
   def create
