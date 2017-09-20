@@ -16,7 +16,7 @@ skip_before_action :verify_authenticity_token
   def create
     pin = Pin.new(pin_params)
         pin.save
-        render json: pin, status: 201
+        render json: pin, status: 200
   end
 
   def destroy
