@@ -10,7 +10,7 @@ skip_before_action :verify_authenticity_token
     # HTTParty.delete('http://localhost:3000/api/v1/pins/10', body: {}.to_json, headers: { 'Content-Type' => 'application/json', 'X-User-Email'=> 'josepaez_2@hotmail.com', 'X-Api-Token'=> '20d8cf670e88edb69e02f93ed2aa493d'})
 
   def index
-    render json: Pin.all.order('created_at DESC'), status: 201
+    render json: Pin.all.order('created_at DESC'), status: 200
   end
 
   def create
